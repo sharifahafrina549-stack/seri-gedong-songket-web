@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Seri Gedong Songket</title>
+
+    <meta name="description" content="Privacy Policy for Seri Gedong Songket - how we collect, use, and protect your personal information.">
+
+    <link rel="icon" type="image/jpeg" href="gallery/maskota logo.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html" data-en="&larr; Back to Home" data-ms="&larr; Kembali ke Laman Utama">&larr; Back to Home</a></li>
+            <li class="lang-toggle">
+                <button type="button" id="langToggleBtn">BM</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Privacy Policy -->
+    <section id="privacy-policy">
+
+        <h2 data-en="Privacy Policy" data-ms="Dasar Privasi">Privacy Policy</h2>
+        <p class="section-hint" data-en="How we handle your information" data-ms="Cara kami mengendalikan maklumat anda">How we handle your information</p>
+
+        <div class="policy-content">
+
+            <div class="policy-item">
+                <h3 data-en="Information We Collect" data-ms="Maklumat Yang Kami Kumpul">Information We Collect</h3>
+                <p data-en="When you contact us via WhatsApp or email, we may collect the information you provide, such as your name, phone number, email address, and order details. We do not use tracking cookies or third-party analytics on this website." data-ms="Apabila anda menghubungi kami melalui WhatsApp atau emel, kami mengumpul maklumat yang anda berikan, seperti nama, nombor telefon, alamat emel, dan butiran pesanan. Kami tidak menggunakan kuki penjejakan atau perkhidmatan analitik pihak ketiga di laman web ini.">When you contact us via WhatsApp or email, we may collect the information you provide, such as your name, phone number, email address, and order details. We do not use tracking cookies or third-party analytics on this website.</p>
+            </div>
+
+            <div class="policy-item">
+                <h3 data-en="How We Use Your Information" data-ms="Cara Kami Menggunakan Maklumat Anda">How We Use Your Information</h3>
+                <p data-en="Your information is used solely to process your order, respond to inquiries, and arrange delivery. We do not sell, rent, or share your personal information with third parties, except courier services necessary to deliver your order." data-ms="Maklumat anda digunakan semata-mata untuk memproses pesanan anda, menjawab pertanyaan, dan mengaturkan penghantaran. Kami tidak menjual, menyewa, atau berkongsi maklumat peribadi anda dengan pihak ketiga, kecuali perkhidmatan kurier yang diperlukan untuk menghantar pesanan anda.">Your information is used solely to process your order, respond to inquiries, and arrange delivery. We do not sell, rent, or share your personal information with third parties, except courier services necessary to deliver your order.</p>
+            </div>
+
+            <div class="policy-item">
+                <h3 data-en="Data Security" data-ms="Keselamatan Data">Data Security</h3>
+                <p data-en="We take reasonable steps to protect your personal information. However, no method of transmission over the internet or through WhatsApp is completely secure, and we cannot guarantee absolute security." data-ms="Kami mengambil langkah-langakh yang munasabah untuk melindungi maklumat peribadi anda. Walau bagaimanapun, tiada kaedah penghantaran melalui internet atau WhatsApp yang benar-benar selamat, dan kami tidak dapat menjamin keselamatan mutlak.">We take reasonable steps to protect your personal information. However, no method of transmission over the internet or through WhatsApp is completely secure, and we cannot guarantee absolute security.</p>
+            </div>
+
+            <div class="policy-item">
+                <h3 data-en="Your Rights" data-ms="Hak Anda">Your Rights</h3>
+                <p data-en="You may request to correction of, or deletion of your personal information held by us at any time by contacting us via WhatsApp or email." data-ms="Anda boleh memohon untuk mengakses, membetulkan atau memadam maklumat peribadi anda yang disimpan oleh kami pada bila-bila masa dengan menghubungi kami melalui WhatsApp atau emel.">You may request to correction of, or deletion of your personal information held by us at any time by contacting us via WhatsApp or email.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-policy.html" data-en="Privacy Policy" data-ms="Dasar Privasi">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms-of-service.html" data-en="Terms of Service" data-ms="Terma Perkhidmatan">Terms of Service</a>
+            <span>|</span>
+            <a href="index.html#return-policy" data-en="Returns" data-ms="Pemulangan">Returns</a>
+        </div>
+        <div class="footer-legal">
+            <p data-en="Seri Gedong Enterprise" data-ms="Seri Gedong Enterprise">Seri Gedong Enterprise</p>
+            <p data-en="Business Registration No.: GDG/52/2016" data-ms="No. Pendaftaran Perniagaan: GDG/52/2016">Business Registration No.: GDG/52/2016</p>
+            <p data-en="Desa Girang, Kampung Kanchong Baru, Gedong, 94800 Simunjan, Sarawak, Malaysia" data-ms="Desa Girang, Kampung Kanchong Baru, Gedong, 94800 Simunjan, Sarawak, Malaysia">Desa Girang, Kampung Kanchong Baru, Gedong, 94800 Simunjan, Sarawak, Malaysia</p>
+        </div>
+        <span data-en="© 2026 Seri Gedong Songket. All Rights Reserved." data-ms="© 2026 Seri Gedong Songket. Hak Cipta Terpelihara.">© 2026 Seri Gedong Songket. All Rights Reserved.</span>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var langBtn = document.getElementById('langToggleBtn');
+            if (!langBtn) return;
+
+            var currentLang = localStorage.getItem('siteLang') || 'en';
+
+            function applyLanguage(lang) {
+                var elements = document.querySelectorAll('[data-en][data-ms]');
+                elements.forEach(function(el) {
+                    el.innerHTML = lang === 'ms' ? el.getAttribute('data-ms') : el.getAttribute('data-en');
+                });
+                langBtn.textContent = lang === 'ms' ? 'EN' : 'BM';
+                localStorage.setItem('siteLang', lang);
+                currentLang = lang;
+            }
+
+            langBtn.addEventListener('click', function() {
+                applyLanguage(currentLang === 'ms' ? 'en' : 'ms');
+            });
+
+            applyLanguage(currentLang);
+        });
+    </script>
+
+</body>
+</html>
