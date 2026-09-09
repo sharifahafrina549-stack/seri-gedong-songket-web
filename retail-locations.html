@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Locations - Seri Gedong Songket</title>
+
+    <meta name="description" content="Find Seri Gedong Songket and Maskota products at our workshop and retail partner locations across Sarawak.">
+
+    <link rel="icon" type="image/jpeg" href="gallery/maskota logo.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html" data-en="&larr; Back to Home" data-ms="&larr; Kembali ke Laman Utama">&larr; Back to Home</a></li>
+            <li class="lang-toggle">
+                <button type="button" id="langToggleBtn">BM</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Retail Locations -->
+    <section id="retail-locations">
+
+        <h2 data-en="Retail Locations" data-ms="Lokasi Runcit">Retail Locations</h2>
+        <p class="section-hint" data-en="Visit us in person or find our products at these locations" data-ms="Lawati kami secara peribadi atau dapatkan produk kami di lokasi berikut">Visit us in person or find our products at these locations</p>
+
+        <div class="location-grid">
+
+            <div class="location-card">
+                <img src="gallery/location-seri-gedong-songket-gallery.jpg" alt="Seri Gedong Songket Gallery" class="location-photo">
+                <h3 data-en="Seri Gedong Songket Gallery" data-ms=" Galeri Seri Gedong Songket">Seri Gedong Songket Gallery</h3>
+                <p data-en="Desa Girang, Kampung Kanchong Baru, Gedong, 94800 Simunjan, Sarawak" data-ms="Desa Girang, Kampung Kanchong Baru, Gedong, 94800 Simunjan, Sarawak">Desa Girang, Kampung Kanchong Baru, Gedong, 94800 Simunjan, Sarawak</p>
+            </div>
+
+            <div class="location-card">
+                <img src="gallery/location-waterfront.jpg" alt="Kuching Waterfront Outlet" class="location-photo">
+                <h3 data-en="Kuching Waterfront Outlet" data-ms="Cawangan Kuching Waterfront">Kuching Waterfront Outlet</h3>
+                <p data-en="No.7, The Sarawak Steamship Building, Kuching Waterfront, Sarawak" data-ms="No.7, The Sarawak Steamship Building, Kuching Waterfront, Sarawak">No.7, The Sarawak Steamship Building, Kuching Waterfront, Sarawak</p>
+            </div>
+
+            <div class="location-card">
+                <img src="gallery/location-ikn.jpg" alt="Institut Kraf Negara Kuching" class="location-photo">
+                <h3 data-en="Institut Kraf Negara (IKN) Kuching" data-ms="Institut Kraf Negara (IKN) Kuching">Institut Kraf Negara (IKN) Kuching</h3>
+                <p data-en="Lot 9727, Blok 18, Daerah Salak, Petra Jaya, 93050 Kuching, Sarawak" data-ms="Lot 9727, Blok 18, Daerah Salak, Petra Jaya, 93050 Kuching, Sarawak">Lot 9727, Blok 18, Daerah Salak, Petra Jaya, 93050 Kuching, Sarawak</p>
+            </div>
+
+            <div class="location-card">
+                <img src="gallery/location-airport.jpg" alt="Kuching International Airport" class="location-photo">
+                <h3 data-en="Kuching International Airport" data-ms="Lapangan Terbang Antarabangsa Kuching">Kuching International Airport</h3>
+                <p data-en="Jalan Lapangan Terbang, 93250 Kuching, Sarawak" data-ms="Jalan Lapangan Terbang, 93250 Kuching, Sarawak">Jalan Lapangan Terbang, 93250 Kuching, Sarawak</p>
+            </div>
+
+        </div>
+
+    </section>
+<!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-policy.html" data-en="Privacy Policy" data-ms="Dasar Privasi">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms-of-service.html" data-en="Terms of Service" data-ms="Terma Perkhidmatan">Terms of Service</a>
+            <span>|</span>
+            <a href="refund-policy.html" data-en="Refund Policy" data-ms="Pemulangan">Refund Policy</a>
+            <span>|</span>
+            <a href="retail-locations.html" data-en="Locations" data-ms="Lokasi">Locations</a>
+        </div>
+
+        <div class="footer-legal">
+            <p data-en="Seri Gedong Enterprise" data-ms="Seri Gedong Enterprise">Seri Gedong Enterprise</p>
+            <p data-en="Business Registration No.: GDG/52/2016" data-ms="No. Pendaftaran Perniagaan: GDG/52/2016">Business Registration No.: GDG/52/2016</p>
+            <p data-en="Desa Girang, Kampung Kanchong Baru, Gedong, 94800 Simunjan, Sarawak, Malaysia" data-ms="Desa Girang, Kampung Kanchong Baru, Gedong, 94800 Simunjan, Sarawak, Malaysia">Desa Girang, Kampung Kanchong Baru, Gedong, 94800 Simunjan, Sarawak, Malaysia</p>
+        </div>
+        <span data-en="© 2026 Seri Gedong Songket. All Rights Reserved." data-ms="© 2026 Seri Gedong Songket. Hak Cipta Terpelihara.">© 2026 Seri Gedong Songket. All Rights Reserved.</span>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var langBtn = document.getElementById('langToggleBtn');
+            if (!langBtn) return;
+
+            var currentLang = localStorage.getItem('siteLang') || 'en';
+
+            function applyLanguage(lang) {
+                var elements = document.querySelectorAll('[data-en][data-ms]');
+                elements.forEach(function(el) {
+                    el.innerHTML = lang === 'ms' ? el.getAttribute('data-ms') : el.getAttribute('data-en');
+                });
+                langBtn.textContent = lang === 'ms' ? 'EN' : 'BM';
+                localStorage.setItem('siteLang', lang);
+                currentLang = lang;
+            }
+
+            langBtn.addEventListener('click', function() {
+                applyLanguage(currentLang === 'ms' ? 'en' : 'ms');
+            });
+
+            applyLanguage(currentLang);
+        });
+    </script>
+
+</body>
+</html>
