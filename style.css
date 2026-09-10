@@ -552,7 +552,7 @@ section > p{
     margin-top:12px;
 }
 
-/* RETURN POLICY */
+/* REFUND POLICY */
 
 .policy-content{
     max-width:800px;
@@ -877,6 +877,36 @@ footer{
     letter-spacing:0.5px;
 }
 
+.footer-links{
+    margin-bottom:18px;
+    font-size:13px;
+}
+
+.footer-links a{
+    color:#e5d3ba;
+    text-decoration:none;
+    transition:.3s;
+}
+.footer-links a:hover{
+    color:gold;
+}
+
+.footer-links span{
+    color:#65152b;
+    margin:0 10px;
+}
+
+.footer-legal{
+    margin-bottom:14px;
+}
+
+.footer-legal p{
+    font-size:12px;
+    color:#c9b391;
+    line-height:1.6;
+    margin-bottom:2px;
+}
+
 /* PRODUCT POPUP MODAL */
 
 .modal{
@@ -1133,6 +1163,79 @@ footer{
     color:#e5d3ba;
     font-size:14px;
     line-height:1.6;
+}
+
+/* RETAIL LOCATIONS */
+
+.location-subheading{
+    color:gold;
+    font-size:18px;
+    text-align:center;
+    letter-spacing:0.5px;
+    margin:36px 0 20px;
+}
+
+.location-subheading:first-of-type{
+    margin-top:0;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+    margin-top:20px;
+}
+
+.location-card{
+    background:linear-gradient(160deg, #65152b, #4a0f1e);
+    border:1px solid rgba(212,175,55,0.4);
+    border-radius:12px;
+    padding:26px 24px;
+    text-align:center;
+    transition:.3s;
+    overflow:hidden;
+}
+
+.location-photo{
+    width:calc(100% + 48px);
+    margin:-26px -24px 16px -24px;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+    border-bottom:1px solid rgba(212,175,55,0.4);
+}
+
+.location-card:hover{
+    transform:translateY(-6px);
+    border-color:gold;
+    box-shadow:0 10px 22px rgba(212,175,55,0.3);
+}
+
+.location-card h3{
+    color:gold;
+    font-size:17px;
+    margin-bottom:10px;
+}
+
+.location-card p{
+    color:#e5d3ba;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:6px;
+}
+
+.location-card a{
+    display:inline-block;
+    color:gold;
+    font-size:13px;
+    font-weight:600;
+    text-decoration:underline;
+    margin-top:8px;
+}
+
+.location-card a:hover{
+    color:#f3e6d8;
 }
 
 /* GOOGLE REVIEWS CTA */
