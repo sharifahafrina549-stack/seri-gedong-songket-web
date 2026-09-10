@@ -10,6 +10,7 @@
 
 html{
     overflow-x: hidden;
+    scroll-behavior:smooth;
 }
 
 body{
@@ -1204,6 +1205,10 @@ footer{
     object-position:center;
     display:block;
     border-bottom:1px solid rgba(212,175,55,0.4);
+}
+
+.location-photo.focus-low{
+    object-position:center 90%;
 }
 
 .location-card:hover{
