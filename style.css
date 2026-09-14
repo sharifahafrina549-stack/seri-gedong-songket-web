@@ -1,5 +1,5 @@
 /* =====================================
-   SERI GEDONG SONGKET
+   SERI GEDONG 
 ===================================== */
 
 *{
@@ -243,11 +243,30 @@ nav a:hover{
     background:radial-gradient(circle at center, #5d1225 0%, #4a0f1e 70%);
 }
 
-/* MASKOTA LOGO */
+/* HERO LOGOS */
 
-.hero-logo{
-    width:220px;
-    height:220px;
+.hero-logos{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:24px;
+    flex-wrap:wrap;
+}
+
+.hero-logo-main{
+    background:#f3e6d8;
+    padding:16px 24px;
+    border-radius:16px;
+    box-shadow:0 0 25px gold;
+    max-width:280px;
+    width:100%;
+    height:auto;
+    animation:floatLogo 3s ease-in-out infinite;
+}
+
+.hero-logo-small{
+    width:120px;
+    height:120px;
     object-fit:contain;
     border-radius:50%;
     border:5px solid gold;
@@ -255,6 +274,17 @@ nav a:hover{
     padding:15px;
     box-shadow:0 0 25px gold;
     animation:floatLogo 3s ease-in-out infinite;
+}
+
+@media (max-width:600px){
+    .hero-logo-main{
+        max-width:220px;
+    }
+
+    .hero-logo-small{
+        width:90px;
+        height:90px;
+    }
 }
 
 @keyframes floatLogo{
